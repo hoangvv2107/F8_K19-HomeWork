@@ -52,7 +52,11 @@ const classMap = {};
 for (const number of mergedClass) {
   classMap[number] = true;
 }
-const filteredClass = Object.keys(classMap).map(Number);
+
+const filteredClass = [];
+for (const number in classMap) {
+  filteredClass.push(Number(number));
+}
 
 const sortedClass = quickSort(filteredClass);
 console.log(sortedClass);
