@@ -62,8 +62,8 @@ const htmlContent = inputData.items.map((item) => {
     <td>${item.name}</td>
     <td>${item.size}</td>
     <td>${item.quantity}</td>
-    <td class="text-right">${item.price}đ</td>
-    <td class="text-right" style="font-weight:bold;">${item.price * item.quantity}đ</td>
+    <td class="text-right">${item.price.toLocaleString('vi')}đ</td>
+    <td class="text-right" style="font-weight:bold;">${(item.price * item.quantity).toLocaleString('vi')}đ</td>
   </tr>
   `;
 });
@@ -74,14 +74,14 @@ const subTotal = document.getElementById("sub-total");
 const calculateSubTotal = inputData.items.reduce((sum, item) => {
   return (sum += item.quantity * item.price);
 }, 0);
-subTotal.textContent = `${calculateSubTotal} đ`;
+subTotal.textContent = `${calculateSubTotal.toLocaleString('vi')} đ`;
 addInfo("promo-desc", "promotion", "description");
 const discountAmount = document.getElementById("discount-amount");
 const calculateDiscountAmount =
   -calculateSubTotal * (inputData.promotion.discountPercent / 100);
-discountAmount.textContent = `${calculateDiscountAmount} đ`;
+discountAmount.textContent = `${calculateDiscountAmount.toLocaleString('vi')} đ`;
 
 const grandTotal = document.getElementById("grand-total");
 
 const calculateGrandTotal = calculateSubTotal + calculateDiscountAmount;
-grandTotal.textContent = `${calculateGrandTotal} đ`;
+grandTotal.textContent = `${calculateGrandTotal.toLocaleString('vi')} đ`;
