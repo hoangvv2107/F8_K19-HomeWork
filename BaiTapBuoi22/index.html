@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="invoice-card">
+      <header class="header">
+        <div class="brand">
+          <h1 class="title">
+            <span class="logo">WM</span>
+            <span>WinMark 2 Hai Bà Trưng</span>
+          </h1>
+          <p>Cung cấp sản phẩm thời trang cao cấp & thiết kế độc quyền.</p>
+        </div>
+        <div class="invoice-info">
+          <div class="badge">HÓA ĐƠN BÁN LẺ</div>
+          <p>Mã số: <strong id="inv-no"></strong></p>
+          <p>Ngày bán: <span id="inv-date"></span></p>
+        </div>
+      </header>
+
+      <section class="info-section">
+        <div class="info-box">
+          <h3>Đơn vị bán hàng (Seller)</h3>
+          <p id="seller-name"></p>
+          <div class="detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="seller-address"></span>
+          </div>
+          <div class="detail">
+            <i class="fa-solid fa-phone"></i> <span id="seller-phone"></span>
+          </div>
+        </div>
+        <div class="info-box">
+          <h3>Khách hàng (Buyer)</h3>
+          <p id="customer-name"></p>
+          <div class="detail">
+            <b style="color: #000">Tuổi:</b> <span id="customer-age"></span>
+          </div>
+          <div class="detail">
+            <i class="fa-solid fa-house"></i>
+            <span id="customer-address"></span>
+          </div>
+        </div>
+      </section>
+
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên sản phẩm</th>
+            <th>Size</th>
+            <th>SL</th>
+            <th class="text-right">Đơn giá</th>
+            <th class="text-right">Thành tiền</th>
+          </tr>
+        </thead>
+        <tbody id="invoice-items"></tbody>
+      </table>
+
+      <section class="summary-section">
+        <div class="promotion-box">
+          <h4>✔ KHUYẾN MÃI / TRỢ GIÁ</h4>
+          <p id="promo-desc"></p>
+        </div>
+        <div class="totals">
+          <div class="total-line">
+            <span>Cộng tiền hàng:</span>
+            <strong id="sub-total"></strong>
+          </div>
+          <div class="total-line discount">
+            <span>Khấu trừ giảm giá:</span>
+            <strong id="discount-amount"></strong>
+          </div>
+          <div class="total-line grand-total">
+            <span>Tổng thanh toán:</span>
+            <span id="grand-total" style="color: var(--green-text)"></span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
