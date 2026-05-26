@@ -60,7 +60,7 @@ const main = async () => {
 
   const buyButton = document.querySelectorAll(".btn-buy");
   const cartBadge = document.getElementById("cart-badge");
-  getButton.forEach((button, index) => {
+  buyButton.forEach((button, index) => {
     button.onclick = () => {
       cart.push(productsData[index]);
       cartBadge.textContent = cart.length;
