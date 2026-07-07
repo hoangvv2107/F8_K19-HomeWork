@@ -13,4 +13,13 @@ export class OrderItem implements OrderItemI {
   getTotal(): number {
     return this.quantity * this.price;
   }
+  getProduct(): Product {
+    return this.product;
+  }
+  getPrice(): number {
+    return this.price;
+  }
+  getQuantity(): number {
+    return this.quantity;
+  }
 }

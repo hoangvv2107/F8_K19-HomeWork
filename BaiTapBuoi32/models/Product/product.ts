@@ -18,7 +18,7 @@ export class Product implements ProductI {
     this.stock -= quantity;
   }
   toString(): string {
-    return `Product {
+    return `{
         id: ${this.id},
         name: ${this.name},
         price: ${this.price},
@@ -30,6 +30,9 @@ export class Product implements ProductI {
   }
   getName(): string {
     return this.name;
+  }
+  getPrice(): number {
+    return this.price;
   }
   setName(name: string): void {
     this.name = name;

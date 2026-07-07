@@ -20,7 +20,7 @@ export class Customer implements CustomerI {
     this.address = address;
   }
   toString(): string {
-    return `Customer {
+    return `{
         id: ${this.id}
         name: ${this.name}
         phone: ${this.phone}

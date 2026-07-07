@@ -12,26 +12,62 @@ export class Order implements OrderI {
   private createdAt: Date;
   private status: OrderStatus;
 
-  constructor(customer: Customer, status: OrderStatus) {
+  constructor(customer: Customer) {
     this.id = v7().toString();
     this.customer = customer;
     this.createdAt = new Date();
-    this.status = status;
+    this.status = "NEW";
   }
   addItem(item: OrderItem): void {
     this.items.push(item);
   }
+  getId() {
+    return this.id;
+  }
+  setStatus(status: OrderStatus) {
+    this.status = status;
+  }
   removeItem(productId: string): void {
     if (this.items.length < 1) {
       console.log("Hien chua co san pham nao trong order");
-      return
+      return;
     }
-    
+    const itemRemove = this.items.find((item) => {
+      return item.getProduct().getId().trim() === productId.trim();
+    });
+    if (!itemRemove) {
+      console.log("Khong tim thay san pham");
+      return;
+    }
+    const itemRemoveIdx = this.items.indexOf(itemRemove);
+    this.items.splice(itemRemoveIdx, 1);
+    console.log("Da xoa item thanh cong");
   }
   calculateTotal(): number {
-    throw new Error("Method not implemented.");
+    let sum = 0;
+    this.items.forEach((item) => {
+      sum += item.getTotal();
+    });
+    return sum;
   }
   printInvoice(): void {
-    throw new Error("Method not implemented.");
+    console.log("Hoa Don Cua Quy Khach:");
+    console.log(`id: ${this.id}`);
+    console.log(`customer: ${this.customer.toString()}`);
+    console.log(`createdAt: ${this.createdAt}`);
+    console.log(`status: ${this.status}`);
+    if (this.items.length < 1) {
+      console.log("Hien chua co san pham nao trong order");
+      return;
+    }
+    console.log("Cac San Pham Cua Quy Khach Gom:");
+    this.items.forEach((item, index) => {
+      console.log(`Product ${index}: ${item.getProduct().toString()}`);
+      console.log(`Quantity: ${item.getQuantity()}`);
+      console.log(`Price: ${item.getPrice()}`);
+      console.log("============");
+    });
+
+    console.log(`Tong Hoa Don Cua Quy Khach La: ${this.calculateTotal()}`);
   }
 }
