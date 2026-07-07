@@ -1,6 +1,6 @@
 import { Product } from "../../models/Product/product";
 
-export type DataUpdate = {
+export type DataUpdateProduct = {
   name?: string;
   price?: number;
   stock?: number;
@@ -9,7 +9,7 @@ export type DataUpdate = {
 export interface ProductServiceI {
   addProduct(product: Product): void;
 
-  updateProduct(id: string, data: DataUpdate): void;
+  updateProduct(id: string, data: DataUpdateProduct): void;
 
   deleteProduct(id: string): void;
 

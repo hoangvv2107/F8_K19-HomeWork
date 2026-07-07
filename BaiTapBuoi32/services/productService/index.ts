@@ -1,12 +1,12 @@
 import { Product } from "../../models/Product/product";
-import { ProductServiceI, DataUpdate } from "./type";
+import { ProductServiceI, DataUpdateProduct } from "./type";
 
 export class ProductService implements ProductServiceI {
   private products: Product[] = [];
   addProduct(product: Product): void {
     this.products.push(product);
   }
-  updateProduct(id: string, data: DataUpdate): void {
+  updateProduct(id: string, data: DataUpdateProduct): void {
     const product = this.findById(id);
     if (!product) {
       console.log("Khong tim thay san pham");

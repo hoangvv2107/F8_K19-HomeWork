@@ -1,3 +1,5 @@
+import { Customer } from "./models/Customer/customer";
+import { CustomerService } from "./services/customerService";
 import { Product } from "./models/Product/product";
 import { ProductService } from "./services/productService";
 
@@ -14,3 +16,12 @@ products.printProducts();
 products.deleteProduct(ip12.getId());
 products.updateProduct(ip13.getId(), { name: "ip15" });
 products.printProducts();
+
+const customer1 = new Customer("Hoang", "099999999", "Thai Binh");
+const customer2 = new Customer("Huy", "0111111111", "Thai Binh");
+const customer3 = new Customer("Nam", "0888888888", "Thai Binh");
+const customers = new CustomerService();
+customers.addCustomer(customer1)
+customers.addCustomer(customer2)
+customers.addCustomer(customer3)
+console.log(customers.printCustomers());
