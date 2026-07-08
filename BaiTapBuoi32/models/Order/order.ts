@@ -18,14 +18,26 @@ export class Order implements OrderI {
     this.createdAt = new Date();
     this.status = "NEW";
   }
+  getId(): string {
+    return this.id;
+  }
   addItem(item: OrderItem): void {
     this.items.push(item);
   }
-  getId() {
-    return this.id;
+  getItems(): OrderItem[] {
+    return this.items;
+  }
+  getCustomer(): Customer {
+    return this.customer;
+  }
+  getCreatedAt(): Date {
+    return this.createdAt;
   }
   setStatus(status: OrderStatus) {
     this.status = status;
+  }
+  getStatus(): OrderStatus {
+    return this.status;
   }
   removeItem(productId: string): void {
     if (this.items.length < 1) {
@@ -62,9 +74,8 @@ export class Order implements OrderI {
     }
     console.log("Cac San Pham Cua Quy Khach Gom:");
     this.items.forEach((item, index) => {
-      console.log(`Product ${index}: ${item.getProduct().toString()}`);
+      console.log(`Product ${index + 1}: ${item.getProduct().toString()}`);
       console.log(`Quantity: ${item.getQuantity()}`);
-      console.log(`Price: ${item.getPrice()}`);
       console.log("============");
     });
 

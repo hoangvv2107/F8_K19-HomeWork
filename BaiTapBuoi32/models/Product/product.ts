@@ -34,6 +34,9 @@ export class Product implements ProductI {
   getPrice(): number {
     return this.price;
   }
+  getStock(): number {
+    return this.stock;
+  }
   setName(name: string): void {
     this.name = name;
   }
