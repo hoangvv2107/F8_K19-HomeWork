@@ -29,9 +29,9 @@ customers.addCustomer(customer2);
 customers.addCustomer(customer3);
 // customers.printCustomers();
 
-const orderItem1 = new OrderItem(ip12, 1, ip12.getPrice());
-const orderItem2 = new OrderItem(ip14, 2, ip14.getPrice());
-const orderItem3 = new OrderItem(ip13, 5, ip13.getPrice());
+const orderItem1 = new OrderItem(ip12, 1);
+const orderItem2 = new OrderItem(ip14, 2);
+const orderItem3 = new OrderItem(ip13, 5);
 
 const order = new Order(customer1);
 order.addItem(orderItem1);

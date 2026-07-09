@@ -37,11 +37,7 @@ export class OrderService implements OrderServiceI {
       console.log("So luong yeu cau cua ban > so luong con lai cua kho hang!");
       return;
     }
-    const orderItemNew = new OrderItem(
-      productFind,
-      quantity,
-      productFind.getPrice(),
-    );
+    const orderItemNew = new OrderItem(productFind, quantity);
     orderFind.addItem(orderItemNew);
     console.log("Da them san pham thanh cong");
   }

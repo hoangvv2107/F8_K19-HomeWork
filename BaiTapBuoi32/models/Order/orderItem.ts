@@ -5,10 +5,10 @@ export class OrderItem implements OrderItemI {
   private product: Product;
   private quantity: number;
   private price: number;
-  constructor(product: Product, quantity: number, price: number) {
+  constructor(product: Product, quantity: number) {
     this.product = product;
     this.quantity = quantity;
-    this.price = price;
+    this.price = product.getPrice();
   }
   getTotal(): number {
     return this.quantity * this.price;
