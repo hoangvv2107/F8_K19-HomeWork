@@ -48,7 +48,7 @@ export class ProductService implements ProductServiceI {
     });
   }
   getAllProducts(): Product[] {
-    return this.products;
+    return [...this.products];
   }
   printProducts(): void {
     if (this.products.length === 0) {

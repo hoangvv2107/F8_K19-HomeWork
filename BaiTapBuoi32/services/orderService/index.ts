@@ -95,7 +95,7 @@ export class OrderService implements OrderServiceI {
     });
   }
   getOrders(): Order[] {
-    return this.orders;
+    return [...this.orders];
   }
   printOrders(): void {
     if (this.orders.length < 1) {

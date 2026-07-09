@@ -37,7 +37,7 @@ export class CustomerService implements CustomerServiceI {
     });
   }
   getAllCustomers(): Customer[] {
-    return this.customers;
+    return [...this.customers];
   }
   printCustomers(): void {
     if (this.customers.length < 1) {
