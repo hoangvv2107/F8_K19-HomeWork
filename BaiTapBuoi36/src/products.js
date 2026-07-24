@@ -20,11 +20,11 @@ export const products = [
     salePrice: 52990000,
     originalPrice: null,
     discountPercent: null,
-    promotions: ["Smember giảm đến 530.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 530.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
-    rating: 5,
+    rating: null,
   },
   {
     id: uuidv7(),
@@ -37,7 +37,7 @@ export const products = [
     salePrice: 35990000,
     originalPrice: 37990000,
     discountPercent: 5,
-    promotions: ["Smember giảm đến 360.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 360.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 6 tháng",
     shippingTime: "2 Giờ",
@@ -54,11 +54,11 @@ export const products = [
     salePrice: 46990000,
     originalPrice: null,
     discountPercent: null,
-    promotions: ["Smember giảm đến 470.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 470.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
-    rating: 5,
+    rating: null,
   },
   {
     id: uuidv7(),
@@ -71,7 +71,10 @@ export const products = [
     salePrice: 30890000,
     originalPrice: 36990000,
     discountPercent: 16,
-    promotions: ["Smember giảm đến 309.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 309.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -88,7 +91,10 @@ export const products = [
     salePrice: 41990000,
     originalPrice: 46990000,
     discountPercent: 11,
-    promotions: ["Smember giảm đến 420.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 420.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -105,7 +111,7 @@ export const products = [
     salePrice: 33890000,
     originalPrice: 34990000,
     discountPercent: 3,
-    promotions: ["Smember giảm đến 339.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 339.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 6 tháng",
     shippingTime: "2 Giờ",
@@ -122,7 +128,7 @@ export const products = [
     salePrice: 23990000,
     originalPrice: 24990000,
     discountPercent: 4,
-    promotions: ["Smember giảm đến 240.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 240.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 6 tháng",
     shippingTime: "2 Giờ",
@@ -139,7 +145,10 @@ export const products = [
     salePrice: 6790000,
     originalPrice: 7090000,
     discountPercent: 4,
-    promotions: ["Smember giảm đến 68.000đ", "S-Student giảm thêm 339.500đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 68.000đ" },
+      { type: "student", text: "S-Student giảm thêm 339.500đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -156,7 +165,7 @@ export const products = [
     salePrice: 22990000,
     originalPrice: 31990000,
     discountPercent: 28,
-    promotions: ["Smember giảm đến 230.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 230.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 6 tháng",
     shippingTime: "2 Giờ",
@@ -173,7 +182,10 @@ export const products = [
     salePrice: 15490000,
     originalPrice: 15990000,
     discountPercent: 3,
-    promotions: ["Smember giảm đến 155.000đ", "S-Student giảm thêm 300.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 155.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -190,7 +202,10 @@ export const products = [
     salePrice: 6990000,
     originalPrice: 7490000,
     discountPercent: 7,
-    promotions: ["Smember giảm đến 70.000đ", "S-Student giảm thêm 300.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 70.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -207,7 +222,10 @@ export const products = [
     salePrice: 21490000,
     originalPrice: 25990000,
     discountPercent: 17,
-    promotions: ["Smember giảm đến 215.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 215.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -224,7 +242,10 @@ export const products = [
     salePrice: 8490000,
     originalPrice: 10800000,
     discountPercent: 21,
-    promotions: ["Smember giảm đến 85.000đ", "S-Student giảm thêm 300.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 85.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -241,7 +262,10 @@ export const products = [
     salePrice: 4790000,
     originalPrice: 5090000,
     discountPercent: 6,
-    promotions: ["Smember giảm đến 48.000đ", "S-Student giảm thêm 239.500đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 48.000đ" },
+      { type: "student", text: "S-Student giảm thêm 239.500đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -258,7 +282,10 @@ export const products = [
     salePrice: 11190000,
     originalPrice: 12490000,
     discountPercent: 10,
-    promotions: ["Smember giảm đến 112.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 112.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -275,7 +302,10 @@ export const products = [
     salePrice: 13790000,
     originalPrice: 16990000,
     discountPercent: 19,
-    promotions: ["Smember giảm đến 138.000đ", "S-Student giảm thêm 300.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 138.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -292,7 +322,10 @@ export const products = [
     salePrice: 11990000,
     originalPrice: null,
     discountPercent: null,
-    promotions: ["Smember giảm đến 120.000đ", "S-Student giảm thêm 300.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 120.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: null,
@@ -309,7 +342,7 @@ export const products = [
     salePrice: 17990000,
     originalPrice: 19990000,
     discountPercent: 10,
-    promotions: ["Smember giảm đến 180.000đ"],
+    promotions: [{ type: "smember", text: "Smember giảm đến 180.000đ" }],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 6 tháng",
     shippingTime: "2 Giờ",
@@ -326,7 +359,10 @@ export const products = [
     salePrice: 19990000,
     originalPrice: 26500000,
     discountPercent: 25,
-    promotions: ["Smember giảm đến 200.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 200.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -348,11 +384,12 @@ export const products = [
     originalPrice: null,
     discountPercent: null,
     promotions: [
-      "Smember giảm đến 170.000đ",
-      "S-Student giảm thêm 500.000đ",
-      "CHUỘT LENOVO 350 BLUETOOTH SILENT và 2 km khác",
+      { type: "smember", text: "Smember giảm đến 170.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+      { type: "other", text: "CHUỘT LENOVO 350 BLUETOOTH SILENT và 2 km khác" },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: null,
     rating: null,
   },
@@ -367,7 +404,10 @@ export const products = [
     salePrice: 34590000,
     originalPrice: 35590000,
     discountPercent: 3,
-    promotions: ["Smember giảm đến 346.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 346.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -385,11 +425,15 @@ export const products = [
     originalPrice: 4990000,
     discountPercent: 6,
     promotions: [
-      "Smember giảm đến 47.000đ",
-      "S-Student giảm thêm 234.500đ",
-      "Tặng phiếu mua hàng trị giá lên đến 300.000đ khi mua kèm Tai nghe Buds 8 Pro/8 Active và 4 km khác",
+      { type: "smember", text: "Smember giảm đến 47.000đ" },
+      { type: "student", text: "S-Student giảm thêm 234.500đ" },
+      {
+        type: "other",
+        text: "Tặng phiếu mua hàng trị giá lên đến 300.000đ khi mua kèm Tai nghe Buds 8 Pro/8 Active và 4 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: null,
   },
@@ -405,11 +449,15 @@ export const products = [
     originalPrice: 23990000,
     discountPercent: 2,
     promotions: [
-      "Smember giảm đến 235.000đ",
-      "S-Student giảm thêm 500.000đ",
-      "Tặng túi Legion Sling Bag trị giá 990,000 và 1 km khác",
+      { type: "smember", text: "Smember giảm đến 235.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+      {
+        type: "other",
+        text: "Tặng túi Legion Sling Bag trị giá 990,000 và 1 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: null,
   },
@@ -425,11 +473,15 @@ export const products = [
     originalPrice: 9990000,
     discountPercent: 16,
     promotions: [
-      "Smember giảm đến 84.000đ",
-      "S-Student giảm thêm 671.200đ",
-      "Giảm thêm đến 5 triệu đồng cho Tivi/Màn hình Samsung khi mua iPad/Tablet Samsung và 1 km khác",
+      { type: "smember", text: "Smember giảm đến 84.000đ" },
+      { type: "student", text: "S-Student giảm thêm 671.200đ" },
+      {
+        type: "other",
+        text: "Giảm thêm đến 5 triệu đồng cho Tivi/Màn hình Samsung khi mua iPad/Tablet Samsung và 1 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: null,
   },
@@ -445,11 +497,15 @@ export const products = [
     originalPrice: 8790000,
     discountPercent: 26,
     promotions: [
-      "Smember giảm đến 65.000đ",
-      "S-Student giảm thêm 300.000đ",
-      "Chi thêm 200K - Nhận ngay dịch vụ Bảo hành Vip 12 tháng 1 đổi 1 tại CellphoneS và 4 km khác",
+      { type: "smember", text: "Smember giảm đến 65.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+      {
+        type: "other",
+        text: "Chi thêm 200K - Nhận ngay dịch vụ Bảo hành Vip 12 tháng 1 đổi 1 tại CellphoneS và 4 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: null,
   },
@@ -465,11 +521,15 @@ export const products = [
     originalPrice: null,
     discountPercent: null,
     promotions: [
-      "Smember giảm đến 99.000đ",
-      "S-Student giảm thêm 494.500đ",
-      "Tặng tai nghe Không dây Anker Soundcore R60I NC - A3959 ĐEN và 1 km khác",
+      { type: "smember", text: "Smember giảm đến 99.000đ" },
+      { type: "student", text: "S-Student giảm thêm 494.500đ" },
+      {
+        type: "other",
+        text: "Tặng tai nghe Không dây Anker Soundcore R60I NC - A3959 ĐEN và 1 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 5,
   },
@@ -485,12 +545,16 @@ export const products = [
     originalPrice: 18490000,
     discountPercent: 16,
     promotions: [
-      "Smember giảm đến 156.000đ",
-      "S-Student giảm thêm 300.000đ",
-      "PMH 2,000,000₫",
-      "Chi thêm 350K - Nhận ngay dịch vụ Bảo hành Vip 12 tháng 1 đổi 1 tại CellphoneS và 6 km khác",
+      { type: "smember", text: "Smember giảm đến 156.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+      { type: "other", text: "PMH 2,000,000₫" },
+      {
+        type: "other",
+        text: "Chi thêm 350K - Nhận ngay dịch vụ Bảo hành Vip 12 tháng 1 đổi 1 tại CellphoneS và 6 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 4.6,
   },
@@ -506,11 +570,15 @@ export const products = [
     originalPrice: null,
     discountPercent: null,
     promotions: [
-      "Smember giảm đến 180.000đ",
-      "S-Student giảm thêm 500.000đ",
-      "Giảm đến 1 triệu khi thanh toán qua thẻ tín dụng HSBC và 2 km khác",
+      { type: "smember", text: "Smember giảm đến 180.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+      {
+        type: "other",
+        text: "Giảm đến 1 triệu khi thanh toán qua thẻ tín dụng HSBC và 2 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 4.9,
   },
@@ -525,7 +593,10 @@ export const products = [
     salePrice: 12490000,
     originalPrice: 12790000,
     discountPercent: 2,
-    promotions: ["Smember giảm đến 125.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 125.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -542,7 +613,10 @@ export const products = [
     salePrice: 14690000,
     originalPrice: 16490000,
     discountPercent: 11,
-    promotions: ["Smember giảm đến 147.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 147.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -559,8 +633,12 @@ export const products = [
     salePrice: 3390000,
     originalPrice: 3990000,
     discountPercent: 15,
-    promotions: ["Smember giảm đến 68.000đ", "S-Student giảm thêm 169.500đ"],
-    installmentDetail: "Trả góp 0%",
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 68.000đ" },
+      { type: "student", text: "S-Student giảm thêm 169.500đ" },
+    ],
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: null,
   },
@@ -576,11 +654,15 @@ export const products = [
     originalPrice: 15990000,
     discountPercent: 16,
     promotions: [
-      "Smember giảm đến 135.000đ",
-      "S-Student giảm thêm 300.000đ",
-      "Tặng phiếu mua hàng trị giá lên đến 300.000đ khi mua kèm Tai nghe Buds 8 Pro/8 Active và 4 km khác",
+      { type: "smember", text: "Smember giảm đến 135.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+      {
+        type: "other",
+        text: "Tặng phiếu mua hàng trị giá lên đến 300.000đ khi mua kèm Tai nghe Buds 8 Pro/8 Active và 4 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 5,
   },
@@ -596,11 +678,12 @@ export const products = [
     originalPrice: null,
     discountPercent: null,
     promotions: [
-      "Smember giảm đến 110.000đ",
-      "S-Student giảm thêm 500.000đ",
-      "Tặng bút cảm ứng thông minh Honor và 5 km khác",
+      { type: "smember", text: "Smember giảm đến 110.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+      { type: "other", text: "Tặng bút cảm ứng thông minh Honor và 5 km khác" },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 5,
   },
@@ -615,7 +698,10 @@ export const products = [
     salePrice: 15290000,
     originalPrice: 15590000,
     discountPercent: 2,
-    promotions: ["Smember giảm đến 153.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 153.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -633,11 +719,15 @@ export const products = [
     originalPrice: 10490000,
     discountPercent: 5,
     promotions: [
-      "Smember giảm đến 100.000đ",
-      "S-Student giảm thêm 300.000đ",
-      "Tặng chuột Bluetooth Huawei CD26 trị giá 499,000 và 5 km khác",
+      { type: "smember", text: "Smember giảm đến 100.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+      {
+        type: "other",
+        text: "Tặng chuột Bluetooth Huawei CD26 trị giá 499,000 và 5 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: null,
   },
@@ -653,11 +743,15 @@ export const products = [
     originalPrice: 6690000,
     discountPercent: 7,
     promotions: [
-      "Smember giảm đến 62.000đ",
-      "S-Student giảm thêm 300.000đ",
-      "Tặng phiếu mua hàng trị giá lên đến 300.000đ khi mua kèm Tai nghe Buds 8 Pro/8 Active và 4 km khác",
+      { type: "smember", text: "Smember giảm đến 62.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+      {
+        type: "other",
+        text: "Tặng phiếu mua hàng trị giá lên đến 300.000đ khi mua kèm Tai nghe Buds 8 Pro/8 Active và 4 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 5,
   },
@@ -673,12 +767,16 @@ export const products = [
     originalPrice: 13490000,
     discountPercent: 11,
     promotions: [
-      "Smember giảm đến 120.000đ",
-      "S-Student giảm thêm 300.000đ",
-      "PMH 1,500,000₫",
-      "Bộ ứng dụng Văn phòng WPS 3.0, Huawei Notes, App Gallery . Hướng dẫn cài đặt WPS 3.0 và google play và 7 km khác",
+      { type: "smember", text: "Smember giảm đến 120.000đ" },
+      { type: "student", text: "S-Student giảm thêm 300.000đ" },
+      { type: "other", text: "PMH 1,500,000₫" },
+      {
+        type: "other",
+        text: "Bộ ứng dụng Văn phòng WPS 3.0, Huawei Notes, App Gallery . Hướng dẫn cài đặt WPS 3.0 và google play và 7 km khác",
+      },
     ],
-    installmentDetail: "Trả góp 0%",
+    installmentDetail:
+      "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
     rating: 5,
   },
@@ -693,7 +791,10 @@ export const products = [
     salePrice: 18990000,
     originalPrice: 21490000,
     discountPercent: 12,
-    promotions: ["Smember giảm đến 190.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 190.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",
@@ -710,7 +811,10 @@ export const products = [
     salePrice: 19690000,
     originalPrice: 20990000,
     discountPercent: 6,
-    promotions: ["Smember giảm đến 197.000đ", "S-Student giảm thêm 500.000đ"],
+    promotions: [
+      { type: "smember", text: "Smember giảm đến 197.000đ" },
+      { type: "student", text: "S-Student giảm thêm 500.000đ" },
+    ],
     installmentDetail:
       "Trả góp 0% - 0đ phụ phí - 0đ trả trước - kỳ hạn đến 12 tháng",
     shippingTime: "2 Giờ",

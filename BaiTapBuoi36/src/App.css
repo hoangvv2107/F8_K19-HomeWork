@@ -32,7 +32,9 @@
   padding: 10px;
   background: #fff;
   border-radius: 16px;
-  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .product-card a {
   display: block;
@@ -40,6 +42,7 @@
 .product-card img {
   display: block;
   width: 100%;
+  padding: 10px;
 }
 .name-product {
   font-size: 14px;
@@ -65,4 +68,181 @@
   background-color: #fdeaea;
   color: #bf1717;
   border: 1px solid #f6d2d2;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+}
+.sale-price {
+  color: #d70018;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.original-price {
+  color: #999999;
+  font-size: 14px;
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+/* Vùng chứa toàn bộ danh sách khuyến mãi */
+.promotions-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Khoảng cách giữa các dòng */
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Định dạng chung cho tất cả các thẻ */
+.promo-item {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+  width: fit-content; /* Ôm vừa khít nội dung chữ */
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* -------------------------------------
+   MÀU SẮC CHO TỪNG LOẠI KHUYẾN MÃI
+---------------------------------------- */
+
+/* Tag Smember (Màu xanh dương) */
+.promo-smember {
+  background-color: #e5edff;
+  color: #1a56c0;
+}
+
+/* Tag S-Student (Màu tím) */
+.promo-student {
+  background-color: #f4e8fe;
+  color: #71249b;
+}
+
+/* Tag Khác & Trả góp (Màu xám nhạt) */
+.promo-other {
+  background-color: #f3f4f6;
+  color: #333333;
+  width: 100%; /* Thường các tag màu xám sẽ kéo dài hết chiều ngang */
+  box-sizing: border-box;
+  padding: 6px 8px; /* Tag xám thường có đệm rộng hơn một chút */
+}
+
+.badge-installment {
+  position: absolute;
+  top: 0;
+  right: -4px; /* Kéo thò ra ngoài bên phải 4px */
+  background-color: #e5eeff; /* Xanh nhạt */
+  color: #1a56c0; /* Chữ xanh đậm */
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  /* Bo tròn 3 góc, góc dưới-phải để vuông góc ghép với nếp gấp */
+  border-radius: 4px 4px 0 4px;
+  z-index: 2;
+}
+
+/* Vẽ tam giác nếp gấp bằng ::after */
+.badge-installment::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Đẩy xuống dưới chính xác bằng độ dày của tam giác */
+  right: 0;
+  border-top: 4px solid #002d73; /* Màu xanh thẫm tạo đổ bóng */
+  border-right: 4px solid transparent; /* Vát chéo góc phải */
+}
+/* =========================================
+   TEM GIẢM GIÁ (GÓC TRÊN BÊN TRÁI)
+============================================ */
+.badge-discount {
+  position: absolute;
+  top: -3px;
+  left: 10px;
+  background-color: #d70018; /* Màu đỏ */
+  color: #ffffff;
+  font-size: 11px; /* Chữ nhỏ lại một chút cho thanh thoát */
+  font-weight: bold;
+  padding: 3px 6px;
+
+  /* Bí quyết ở đây: Bo tròn 3 góc, RIÊNG góc trên-trái để vuông góc (0px) 
+     nhằm nối liền mạch với cái nếp gấp */
+  border-radius: 0 4px 4px 4px;
+  z-index: 2;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15); /* Đổ bóng nhẹ cho đẹp */
+}
+
+/* Vẽ tam giác nếp gấp màu đỏ sẫm ở bên TRÊN */
+.badge-discount::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -4px;
+  border-bottom: 6px solid #8e000d;
+  border-left: 6px solid transparent;
+}
+
+.product-card-upper {
+  padding-bottom: 10px;
+}
+.product-card-lower {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+.btn-like {
+  margin-left: auto;
+  font-size: 20px;
+  color: #3c82f6;
+}
+/* Container chứa cả 2 phần tử */
+.product-card-lower-left {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Khoảng cách giữa tem xe tải và ngôi sao */
+}
+
+/* =========================================
+   1. TEM GIAO HÀNG (MÀU XANH)
+============================================ */
+.shipping-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #2b70fa; /* Xanh dương đậm */
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 8px 4px 14px; /* Trừ hao padding bên trái rộng hơn một chút */
+
+  /* Bo tròn 2 góc bên phải */
+  border-radius: 0 4px 4px 0;
+
+  /* Sử dụng clip-path để cắt cạnh trái tạo hình mũi tên tốc độ */
+  /* Nếu muốn hình răng cưa/vệt lửa chính xác 100% như ảnh, bạn sẽ cần thay clip-path bằng background-image: url('file-svg-cua-ban.svg') */
+  clip-path: polygon(8px 0, 100% 0, 100% 100%, 8px 100%, 0 50%);
+}
+
+.shipping-badge i {
+  font-size: 10px; /* Chỉnh icon xe tải nhỏ lại cho cân đối với chữ */
+}
+
+/* =========================================
+   2. ĐÁNH GIÁ (RATING)
+============================================ */
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333333; /* Màu chữ đen đậm */
+}
+
+.product-rating i {
+  color: #f5a623; /* Màu vàng chuẩn của ngôi sao đánh giá */
+  font-size: 12px;
 }
