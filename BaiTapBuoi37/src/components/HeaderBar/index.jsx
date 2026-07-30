@@ -1,4 +1,4 @@
-import { Link, Links } from "react-router";
+import { NavLink } from "react-router";
 const HeaderBar = ({ numCart }) => {
   return (
     <header className="header">
@@ -8,9 +8,9 @@ const HeaderBar = ({ numCart }) => {
         </div>
 
         <nav className="nav">
-          <Link to="/">Home</Link>
-          <Link to="/products">Products</Link>
-          <Link to="#">Categories</Link>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/products">Products</NavLink>
+          <NavLink to="#">Categories</NavLink>
         </nav>
 
         <div className="cart">
