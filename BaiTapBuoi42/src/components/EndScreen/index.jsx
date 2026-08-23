@@ -69,7 +69,7 @@ export default function EndScreen({
           </div>
           {/* Hiển thị số tiền lấy từ Prop */}
           <div className="text-2xl sm:text-3xl font-black text-amber-400">
-            {prizeMoney}
+            {prizeMoney} VNĐ
           </div>
         </div>
 

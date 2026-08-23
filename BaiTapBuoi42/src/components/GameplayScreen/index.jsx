@@ -7,25 +7,49 @@ export default function GameScreen({
   selectedAnswer,
   isShowingResult,
   nextLevel,
+  lifelines,
+  hiddenAnswers,
+  onFiftyFifty,
+  isLocked,
+  handleAudienceVotes,
+  handlePhoneAdvice,
+  useBackupQuestion,
+  handleSwitchQuestion,
 }) {
   if (!isStartGame) return;
-
+  // Tính toán câu hỏi hiện tại dựa trên "công tắc"
   return (
     <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
       {/* CỘT TRÁI: Trợ giúp + Câu hỏi + 4 Đáp án */}
       <div className="lg:col-span-3 space-y-6">
         {/* 1. Thanh trợ giúp */}
         <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-4 flex justify-around items-center gap-2 shadow-lg">
-          <button className="lifeline-btn flex-1 py-3 rounded-lg font-bold text-amber-300">
+          <button
+            disabled={lifelines.fiftyFifty || isLocked}
+            onClick={onFiftyFifty}
+            className={`lifeline-btn flex-1 py-3 rounded-lg font-bold  ${lifelines.fiftyFifty ? "opacity-50 line-through text-slate-500 cursor-not-allowed " : "text-amber-300 hover:bg-slate-800 cursor-pointer"}`}
+          >
             50:50
           </button>
-          <button className="lifeline-btn flex-1 py-3 rounded-lg font-bold text-sky-300">
+          <button
+            onClick={handlePhoneAdvice}
+            disabled={lifelines.phone || isLocked}
+            className={`lifeline-btn flex-1 py-3 rounded-lg font-bold  ${lifelines.phone ? "opacity-50 line-through text-slate-500 cursor-not-allowed" : "text-sky-300 hover:bg-slate-800 cursor-pointer"}`}
+          >
             Người thân
           </button>
-          <button className="lifeline-btn flex-1 py-3 rounded-lg font-bold text-emerald-300">
+          <button
+            disabled={lifelines.audience || isLocked}
+            onClick={handleAudienceVotes}
+            className={`lifeline-btn flex-1 py-3 rounded-lg font-bold  ${lifelines.audience ? "opacity-50 line-through text-slate-500 cursor-not-allowed" : "text-emerald-300 hover:bg-slate-800 cursor-pointer"}`}
+          >
             Khán giả
           </button>
-          <button className="lifeline-btn flex-1 py-3 rounded-lg font-bold text-purple-300">
+          <button
+            disabled={lifelines.switch || isLocked}
+            onClick={handleSwitchQuestion}
+            className={`lifeline-btn flex-1 py-3 rounded-lg font-bold  ${lifelines.switch ? "opacity-50 line-through text-slate-500 cursor-not-allowed" : "text-purple-300 hover:bg-slate-800 cursor-pointer"}`}
+          >
             Đổi câu hỏi
           </button>
         </div>
@@ -57,7 +81,7 @@ export default function GameScreen({
               <button
                 key={index}
                 onClick={() => onSelectAnswer(index)}
-                className={`option-btn p-4 rounded-xl text-left flex items-center gap-3 cursor-pointer ${statusClass}`}
+                className={`option-btn p-4 rounded-xl text-left flex items-center gap-3 cursor-pointer ${statusClass} ${hiddenAnswers.includes(index) ? "invisible" : ""}`}
               >
                 <span className="font-extrabold text-amber-400 w-8 h-8 rounded-lg bg-slate-900/80 border border-amber-500/30 flex items-center justify-center shrink-0">
                   {labels[index]}
