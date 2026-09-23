@@ -1,0 +1,12 @@
+services:
+  db:
+    container_name: baitapbuoi46
+    image: postgres:17
+    ports:
+      - 4000:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: default
+    volumes:
+      - ./db:/var/lib/postgresql/data
